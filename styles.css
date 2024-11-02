@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Banner */
+
+.header-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 136, 0, 1); 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 8px 12px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a.active::after,
+.navbar ul li a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; 
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: #ffffff; 
+    border-radius: 2px; 
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #ffffff;
+}
+
+/* Banner */
+.parallax-banner {
+    position: relative;
+    height: 40em; 
+    background-image: url('HD-wallpaper-microchip-neon-lines-black-background-chips-technology-backgrounds.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}
+
+
+.parallax-text {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    z-index: 1; 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.parallax-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.parallax-text p {
+    font-size: 1.25rem;
+}
+
+/* Post List */
+.list-controls {
+    display: flex;
+    gap: 10px;
+    padding: 1rem 2rem;
+    margin-top: 20px; 
+}
+
+
+#posts {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+.post-card {
+    display: flex;  
+    flex-direction: column; 
+    justify-content: space-between; 
+    background-color: white; 
+    border-radius: 8px;  
+    padding: 20px; 
+    margin: 15px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s, box-shadow 0.3s; 
+    width: 300px; 
+    height: 350px; 
+}
+
+.post-card img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 4px; 
+}
+
+.content {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    margin-top: auto; 
+}
+
+.post-card h3 {
+    margin: 0; 
+    font-size: 1.2em; 
+    line-height: 1.5;
+}
+
+.release-date {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #adadad;
+    margin-top: 100px;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Section */
+footer {
+    background-color: #f8f8f8;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+
+@media (max-width: 768px) {
+    .parallax-text h2 {
+        font-size: 2rem;
+    }
+    
+    .parallax-text p {
+        font-size: 1rem;
+    }
+    
+    .list-controls {
+        flex-direction: column;
+    }
+}
+
+#list-section {
+    padding: 20px;
+}
+
+.list-controls {
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+    margin-bottom: 20px; 
+}
+
+.list-controls div {
+    margin-left: 20px; 
+}
+
+.list-controls label {
+    margin-left: 10px; 
+}
+
+.item-count {
+    padding-top: 15px;
+    margin-right: 20px; 
+}
+
+
+.controls-wrapper {
+    display: flex;
+    justify-content: flex-end; 
+    margin-bottom: 20px; 
+}
+
+
+select {
+    padding-left: 20px;
+    padding-right: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px; 
+    border: 4px solid #ccc; 
+    border-radius: 20px; 
+}
+
+section label {
+    padding-top: 15px;
+}
+
+
+
+
+.pagination {
+    text-align: center;
+    padding: 1rem;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    font-size: 1em; 
+    border: none;
+    background-color: #f1f1f1; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.pagination button:hover {
+    background-color: #ff8800; 
+    color: white; 
+}
+
+.pagination .current-page {
+    font-size: 1.2em; 
+    font-weight: bold; 
+    background-color: #ff8800;
+    color: white; 
+}
+
+.pagination .arrow {
+    font-size: 1.2em; 
+    cursor: pointer;
+}
+
+
+.pagination .arrow:hover {
+    color: #ff8800; 
+}

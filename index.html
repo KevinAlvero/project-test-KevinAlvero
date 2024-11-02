@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideas Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header id="header" class="header-fixed">
+        <div class="header-content">
+            <img src="LoadImageAction.png" alt="Logo" style="width: 80px; height: 80px;">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#" class="active">Ideas</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section id="banner" class="parallax-banner">
+        <div class="parallax-text">
+            <h2>Ideas</h2>
+            <p>Where ideas get their wings</p>
+        </div>
+    </section>
+    
+    <!-- Post List -->
+    <section id="list-section">
+        <div class="list-controls">
+            <div id="item-count" class="item-count"></div>
+
+            <label for="pageSize">Show per page:</label>
+
+            <select id="pageSize" onchange="fetchData()">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+            </select>
+
+            <label for="sort">Sort by:</label>
+
+            <select id="sort" onchange="fetchData()">
+                <option value="published_at">Oldest</option>
+                <option value="-published_at">Newest</option>
+            </select>
+           
+        </div>
+        <div id="posts" class="posts"></div>
+        <div id="pagination" class="pagination"></div>
+        
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
