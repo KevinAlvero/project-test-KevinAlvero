@@ -39,5 +39,5 @@ app.get('/api/ideas', async (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log(`server running on http://localhost:${PORT}`);
+    console.log(`server running on http://localhost:3000`);
 });
